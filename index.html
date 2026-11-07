@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cibersegura – Valeria Islas</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Cibersegura</h1>
+  <p>Seguridad en el ciberespacio · Proyecto: Del algoritmo a la web</p>
+  <p class="autor">Valeria Islas · Número de lista 16 · Tercer parcial</p>
+  <nav>
+    <a href="#tema">Tema</a>
+    <a href="#consejos">Consejos</a>
+    <a href="#planeacion">Planeación</a>
+    <a href="#algoritmo">Algoritmo interactivo</a>
+    <a href="#pruebas">Pruebas</a>
+    <a href="#fuentes">Fuentes</a>
+  </nav>
+</header>
+
+<main>
+<section id="tema">
+  <h2>1. ¿Qué es la seguridad en el ciberespacio?</h2>
+  <p>El ciberespacio es el mundo digital donde nos comunicamos, estudiamos y compartimos información. La seguridad en el ciberespacio (ciberseguridad) son las acciones que nos ayudan a proteger nuestros datos, cuentas y dispositivos de robos, engaños y daños.</p>
+  <p>Cuidar lo que publicamos y cómo protegemos nuestras cuentas es una responsabilidad de todos, porque un descuido puede afectar a nuestra familia y amigos.</p>
+  <div class="imgs">
+    <figure><img alt="Dibujo de un candado azul que representa la protección de una contraseña" src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%23e8f0fe'/><rect x='28' y='45' width='44' height='35' rx='6' fill='%231a56db'/><path d='M36 45V35a14 14 0 0128 0v10' fill='none' stroke='%231a56db' stroke-width='7'/><circle cx='50' cy='62' r='5' fill='white'/></svg>"><figcaption>Contraseñas</figcaption></figure>
+    <figure><img alt="Dibujo de un escudo azul con una palomita que representa estar protegido" src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%23e8f0fe'/><path d='M50 15L80 27V50C80 68 66 80 50 86C34 80 20 68 20 50V27Z' fill='%231a56db'/><path d='M38 50l9 9 17-18' fill='none' stroke='white' stroke-width='7'/></svg>"><figcaption>Protección</figcaption></figure>
+    <figure><img alt="Dibujo de un sobre de correo que representa los mensajes engañosos o phishing" src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%23e8f0fe'/><rect x='15' y='28' width='70' height='46' rx='6' fill='%231a56db'/><path d='M15 32l35 26 35-26' fill='none' stroke='white' stroke-width='6'/></svg>"><figcaption>Mensajes falsos</figcaption></figure>
+  </div>
+</section>
+
+<section id="consejos">
+  <h2>2. Consejos para cuidarte en internet</h2>
+  <ul>
+    <li><strong>Contraseñas fuertes:</strong> usa 8 o más caracteres con mayúsculas, minúsculas, números y símbolos. No repitas la misma en todas tus cuentas.</li>
+    <li><strong>Cuidado con el phishing:</strong> es cuando alguien finge ser un banco, tienda o amigo para que des tus datos. No abras enlaces sospechosos.</li>
+    <li><strong>Verificación en dos pasos:</strong> activa un código extra en tus cuentas para que nadie entre aunque sepa tu contraseña.</li>
+    <li><strong>Actualiza tus dispositivos:</strong> las actualizaciones corrigen fallas de seguridad.</li>
+    <li><strong>Piensa antes de publicar:</strong> no compartas tu dirección, teléfono ni datos personales con desconocidos.</li>
+  </ul>
+</section>
+
+<section id="planeacion">
+  <h2>3. Producto 1: Algoritmo de planeación del proyecto</h2>
+  <p>Pasos que seguí para construir esta página, en lenguaje natural:</p>
+  <ol>
+    <li>Comienzo el proyecto.</li>
+    <li>Elijo el tema que me corresponde: seguridad en el ciberespacio.</li>
+    <li>Investigo y escribo textos con mis propias palabras.</li>
+    <li>Diseño el algoritmo interactivo (verificador de contraseñas).</li>
+    <li>Programo la página con HTML (estructura), CSS (diseño) y JavaScript (funcionamiento).</li>
+    <li>Reviso si todo funciona. Si no funciona, regreso al paso 5 y corrijo.</li>
+    <li>Si todo funciona, publico la página.</li>
+    <li>Termino el proyecto.</li>
+  </ol>
+  <h3>Diagrama de flujo de la planeación</h3>
+  <div id="flow1" class="flow"></div>
+</section>
+
+<section id="algoritmo">
+  <h2>4. Producto 3: Algoritmo interactivo – Verificador de contraseñas</h2>
+  <p>Escribe una contraseña de prueba y el algoritmo revisará si es segura. <strong>No escribas tu contraseña real.</strong></p>
+  <div class="caja">
+    <label for="pw">Contraseña de prueba:</label>
+    <input id="pw" type="text" autocomplete="off" placeholder="Ejemplo: Hola2024">
+    <button id="btn" type="button">Revisar</button>
+    <div id="res" aria-live="polite"></div>
+  </div>
+
+  <h3>Cómo funciona</h3>
+  <ul>
+    <li><strong>Entrada de datos:</strong> la contraseña que escribe la persona.</li>
+    <li><strong>Repetición:</strong> el algoritmo recorre la contraseña letra por letra con un ciclo MIENTRAS.</li>
+    <li><strong>Decisión (sí / no):</strong> al final pregunta si los puntos son 4 o más. Si es sí, la contraseña es segura; si es no, es insegura.</li>
+  </ul>
+
+  <h3>Pseudocódigo</h3>
+<pre>INICIO
+  LEER contraseña
+  puntos ← 0
+  i ← 1
+  tieneMin, tieneMay, tieneNum, tieneSim ← FALSO
+  MIENTRAS i ≤ LONGITUD(contraseña) HACER
+    c ← carácter en la posición i
+    SI c es minúscula ENTONCES tieneMin ← VERDADERO
+    SI c es mayúscula ENTONCES tieneMay ← VERDADERO
+    SI c es número    ENTONCES tieneNum ← VERDADERO
+    SI c es otro      ENTONCES tieneSim ← VERDADERO
+    i ← i + 1
+  FIN MIENTRAS
+  SI LONGITUD(contraseña) ≥ 8 ENTONCES puntos ← puntos + 1
+  SI tieneMin ENTONCES puntos ← puntos + 1
+  SI tieneMay ENTONCES puntos ← puntos + 1
+  SI tieneNum ENTONCES puntos ← puntos + 1
+  SI tieneSim ENTONCES puntos ← puntos + 1
+  SI puntos ≥ 4 ENTONCES
+    MOSTRAR "Contraseña segura"
+  SINO
+    MOSTRAR "Contraseña insegura"
+  FIN SI
+FIN</pre>
+
+  <h3>Diagrama de flujo del algoritmo</h3>
+  <div id="flow2" class="flow"></div>
+</section>
+
+<section id="pruebas">
+  <h2>5. Producto 4: Tabla de pruebas y depuración</h2>
+  <div class="tabla">
+  <table>
+    <thead><tr><th>#</th><th>Dato de entrada</th><th>Resultado esperado</th><th>Resultado obtenido</th><th>Corrección</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>abc</td><td>Insegura (1 de 5)</td><td>Insegura (1 de 5)</td><td>Ninguna</td></tr>
+      <tr><td>2</td><td>12345678</td><td>Insegura (2 de 5)</td><td>Insegura (2 de 5)</td><td>Ninguna</td></tr>
+      <tr><td>3</td><td>Hola2024</td><td>Segura (4 de 5)</td><td>Segura (4 de 5)</td><td>Ninguna</td></tr>
+      <tr><td>4</td><td>Valeria#16xY</td><td>Segura (5 de 5)</td><td>Segura (5 de 5)</td><td>Ninguna</td></tr>
+      <tr><td>5</td><td>(campo vacío)</td><td>Aviso pidiendo escribir una contraseña</td><td>Primero mostró "Insegura (0 de 5)"</td><td>Agregué una decisión al inicio que revisa si el campo está vacío y muestra un aviso.</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="fuentes">
+  <h2>Fuentes y créditos</h2>
+  <p>Los textos son de mi autoría. Las imágenes son dibujos propios hechos con código (SVG). Los diagramas de flujo fueron elaborados por mí con los símbolos estándar: óvalo (inicio/fin), paralelogramo (entrada/salida), rectángulo (proceso) y rombo (decisión).</p>
+  <p>Referencia consultada (APA):</p>
+  <p class="apa">National Institute of Standards and Technology. (2020). <em>Digital identity guidelines: Authentication and lifecycle management</em> (NIST Special Publication 800-63B). https://pages.nist.gov/800-63-3/sp800-63b.html</p>
+</section>
+</main>
+
+<footer><p>Proyecto individual de Valeria Islas · Lista 16 · Tercer parcial</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
